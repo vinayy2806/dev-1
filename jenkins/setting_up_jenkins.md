@@ -37,6 +37,7 @@ sudo systemctl status jenkins
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
+apt install unzip
 
 # KUBECTL
 
@@ -157,3 +158,10 @@ metadata:
   name: mysecretname  
   annotations:    
     kubernetes.io/service-account.name: jenkins
+
+
+# installing trivy
+
+sudo apt update
+sudo apt install snapd
+sudo snap install trivy
